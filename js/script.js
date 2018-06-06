@@ -1,5 +1,8 @@
 let clicker = {
   score: 0,
+  value: 1,
+  multiply: 1,
+  times: 0,
   init(){
     this.counter();
     this.showScore();
@@ -7,8 +10,22 @@ let clicker = {
   },
 
   counter(){
-    this.score++;
-    console.log(this.score);
+    this.score = this.score+(this.multiply*this.value);
+    this.times++;
+
+    //click boost
+    if(this.times == 100){
+      this.multiply = this.multiply * 2;
+    }
+    if(this.times == 200){
+      this.multiply = this.multiply * 2;
+    }
+    if(this.times == 500){
+      this.multiply = this.multiply * 2;
+    }
+    if(this.times == 1000){
+      this.multiply = this.multiply * 2;
+    }
     return this;
   },
 
@@ -19,10 +36,6 @@ let clicker = {
   unlockMenu(){
     if(this.score > 0){
       menu.style.display = "block";
-    }
-
-    if(this.score > 50){
-
     }
   },
 
@@ -67,9 +80,6 @@ class Auto{
       document.getElementById(this.valueHTML).innerHTML = this.value*this.multiply;
       clicker.showScore();
       return this;
-    }
-    else if(this.number > 0 || clicker.score > this.price){
-      console.log("chuj do szczania");
     }
   }
 
