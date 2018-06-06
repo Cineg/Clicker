@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css?family=Song+Myung');
+
+body{
+  background: #1A1F2B;
+  font-family: 'Song Myung', serif;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+main{
+}
+
+main .click{
+  background: #1A1F2B;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+main .click-text{
+  font-size: 6rem;
+  color: #D0E4F2;
+}
+
+main #click{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  letter-spacing: 0.1rem;
+  font-size: 2.5rem;
+  user-select: none;
+  width: 30rem;
+  height: 30rem;
+  background: #30395C;
+  border-radius: 50%;
+  transition: width 3s ease, height 3s ease;
+}
+main #click:hover{
+  cursor:pointer;
+  width: 33rem;
+  height: 33rem;
+}
+
+
+
+main .score{
+  margin-top: 20px;
+  color: #85A5CC;
+  display: flex;
+  justify-content: center;
+  letter-spacing: 0.05rem;
+  font-size: 1.5rem;
+}
+main .score h3{
+  align-self: center;
+}
+
+main .score p{
+  align-self: center;
+  font-size: 1.7rem;
+  padding-left: 0.5rem;
+  font-weight: 700;
+}
+
+main .score span{
+  align-self: center;
+  font-size: 2rem;
+  padding-left: 0.2rem;
+}
+
+main .wrapper{
+  display: flex;
+  height: 80vh;
+  width: 100%;
+  align-items: center;
+}
+
+
+main .unlocks{
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 20vw;
+  user-select: none;
+  text-align: center;
+  overflow-y: scroll;
+}
+
+main .unlocks > * {
+  color: #85A5CC;
+  padding: 10px;
+}
+
+
+.clickable-buy{
+  display: flex;
+  justify-content: flex-start;
+}
+.clickable-buy .img{
+  width: 100px;
+  height: 100px;
+  background: #4A6491;
+  align-self: center;
+}
+.clickable-buy .text{
+  padding: 5px;
+  align-self: center;
+  text-align: left;
+  line-height: 1;
+}
+
+.clickable-buy:hover{
+  cursor: pointer;
+}
