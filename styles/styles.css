@@ -115,3 +115,35 @@ main .unlocks > * {
 .clickable-buy:hover{
   cursor: pointer;
 }
+
+@media screen and (max-width: 1000px) {
+    body{
+      font-size: 60%;
+    }
+    main .click-text{
+      font-size: 3rem;
+    }
+
+    main #click{
+      width: 15rem;
+      height: 15rem;
+    }
+
+    main #click:hover{
+      cursor:pointer;
+      width: 20rem;
+      height: 20rem;
+    }
+
+    main .unlocks{
+      display: none;
+      position: absolute;
+      top: 70%;
+      height: 30vh;
+      width: 100vw;
+      user-select: none;
+      text-align: center;
+      overflow-y: scroll;
+      font-size: 150%;
+    }
+}
