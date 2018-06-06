@@ -120,11 +120,17 @@ let hands = {
 }
 
 let Hand = new Auto(1, 1000, 10, 'handsPrice', 'handsValue', 'handsCPS');
-let Worker = new Auto(30, 5000, 50, 'workersPrice', 'workersCPS');
+let Worker = new Auto(10, 2000, 50, 'workersPrice', 'workersValue', 'workersCPS');
+let Drill = new Auto(30, 5000, 200, 'drillsPrice', 'drillsValue', 'drillsCPS')
+let Merch = new Auto(100, 15000, 500, 'merchPrice', 'merchValue', 'merchCPS')
+let Startup = new Auto(300, 30000, 1200, 'startupPrice', 'startupValue', 'startupCPS')
+let OilCompany = new Auto(10000, 200000, 7000, 'oilPrice', 'oilValue', 'oilCPS')
+let Illuminati = new Auto(100000, 1000000, 66666, 'illuminatiPrice', 'illuminatiValue', 'illuminatiCPS')
 
 let clickWindow = document.getElementById('click');
 let score = document.getElementById('score');
 let menu = document.getElementById('menu-unlock');
+
 
 
 document.getElementById('hands').addEventListener('click', () =>{
@@ -147,20 +153,49 @@ document.getElementById('workers').addEventListener('click', () =>{
   }
   Worker.buy();
 })
+document.getElementById('drills').addEventListener('click', () =>{
+  if(Drill.number == 0 && clicker.score >= Drill.price){
+    setInterval(function(){
+      Drill.doClicks();
+    }, Drill.time);
+  }
+  Drill.buy();
+})
+document.getElementById('merch').addEventListener('click', () =>{
+  if(Merch.number == 0 && clicker.score >= Merch.price){
+    setInterval(function(){
+      Merch.doClicks();
+    }, Merch.time);
+  }
+  Merch.buy();
+})
+document.getElementById('startup').addEventListener('click', () =>{
+  if(Startup.number == 0 && clicker.score >= Startup.price){
+    setInterval(function(){
+      Startup.doClicks();
+    }, Startup.time);
+  }
+  Startup.buy();
+})
+document.getElementById('oil').addEventListener('click', () =>{
+  if(OilCompany.number == 0 && clicker.score >= OilCompany.price){
+    setInterval(function(){
+      OilCompany.doClicks();
+    }, OilCompany.time);
+  }
+  OilCompany.buy();
+})
+document.getElementById('illuminati').addEventListener('click', () =>{
+  if(Illuminati.number == 0 && clicker.score >= Illuminati.price){
+    setInterval(function(){
+      Illuminati.doClicks();
+    }, Illuminati.time);
+  }
+  Illuminati.buy();
+})
+
+
+
 clickWindow.addEventListener('click', () =>{
   clicker.init();
 });
-
-
-//this fucking work as intended, so im not deleting it yet
-//hands.autoClick();
-
-//Well, it works, but not in the way im happy with.
-/*
-function wait(){
-   setInterval(function(){
-      Jew.doClicks();
-   }, Jew.time);
-}
-wait();
-*/
