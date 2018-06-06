@@ -80,6 +80,14 @@ class Auto{
     document.getElementById(this.cpsHTML).innerHTML = this.cps;
     return this;
     }
+
+  boostTime(minustime){
+    this.time = this.time - minustime;
+    this.cps = (this.number*this.value*this.multiply*1000)/this.time;
+    document.getElementById(this.valueHTML).innerHTML = this.value*this.multiply;
+    document.getElementById(this.cpsHTML).innerHTML = this.cps;
+    return this;
+  }
 }
 
 let hands = {
@@ -141,9 +149,24 @@ document.getElementById('hands').addEventListener('click', () =>{
     }, Hand.time);
   }
   Hand.buy();
+
+  //boosts
   if(Hand.number == 10){
     Hand.boost(2);
   }
+
+  if(Hand.number == 25){
+    Hand.boost(2);
+  }
+
+  if(Hand.number == 50){
+    Hand.boost(2);
+  }
+
+  if(Hand.number == 100){
+    Hand.boost(2);
+  }
+
 })
 document.getElementById('workers').addEventListener('click', () =>{
   if(Worker.number == 0 && clicker.score >= Worker.price){
@@ -152,6 +175,23 @@ document.getElementById('workers').addEventListener('click', () =>{
     }, Worker.time);
   }
   Worker.buy();
+
+
+  if(Worker.number == 10){
+    Worker.boost(2);
+  }
+
+  if(Worker.number == 25){
+    Worker.boost(2);
+  }
+
+  if(Worker.number == 50){
+    Worker.boost(2);
+  }
+
+  if(Worker.number == 100){
+    Worker.boost(2);
+  }
 })
 document.getElementById('drills').addEventListener('click', () =>{
   if(Drill.number == 0 && clicker.score >= Drill.price){
@@ -160,6 +200,17 @@ document.getElementById('drills').addEventListener('click', () =>{
     }, Drill.time);
   }
   Drill.buy();
+
+
+
+  if(Drill.number == 25){
+    Drill.boost(3);
+  }
+
+  if(Drill.number == 100){
+    Drill.boost(4);
+  }
+
 })
 document.getElementById('merch').addEventListener('click', () =>{
   if(Merch.number == 0 && clicker.score >= Merch.price){
@@ -168,6 +219,36 @@ document.getElementById('merch').addEventListener('click', () =>{
     }, Merch.time);
   }
   Merch.buy();
+
+
+  if(Merch.number == 5){
+    Merch.boost(1.2);
+  }
+
+  if(Merch.number == 15){
+    Merch.boost(1.3);
+  }
+
+  if(Merch.number == 33){
+    Merch.boost(1.4);
+  }
+
+  if(Merch.number == 51){
+    Merch.boost(1.5);
+  }
+
+  if(Merch.number == 66){
+    Merch.boost(6.66);
+  }
+  if(Merch.number == 70){
+    Merch.boost(0.8);
+    Merch.boostTime(1000);
+  }
+
+  if(Merch.number == 100){
+    Merch.boost(2);
+  }
+
 })
 document.getElementById('startup').addEventListener('click', () =>{
   if(Startup.number == 0 && clicker.score >= Startup.price){
@@ -176,6 +257,14 @@ document.getElementById('startup').addEventListener('click', () =>{
     }, Startup.time);
   }
   Startup.buy();
+
+  if(Startup.number == 50){
+    Startup.boost(10);
+  }
+
+  if(Startup.number == 100){
+    Startup.boost(2);
+  }
 })
 document.getElementById('oil').addEventListener('click', () =>{
   if(OilCompany.number == 0 && clicker.score >= OilCompany.price){
@@ -184,6 +273,14 @@ document.getElementById('oil').addEventListener('click', () =>{
     }, OilCompany.time);
   }
   OilCompany.buy();
+
+  if(OilCompany.number == 10){
+    OilCompany.boost(5);
+  }
+
+  if(OilCompany.number == 100){
+    OilCompany.boost(5);
+  }
 })
 document.getElementById('illuminati').addEventListener('click', () =>{
   if(Illuminati.number == 0 && clicker.score >= Illuminati.price){
@@ -192,6 +289,15 @@ document.getElementById('illuminati').addEventListener('click', () =>{
     }, Illuminati.time);
   }
   Illuminati.buy();
+
+  if(Illuminati.number == 66){
+    Illuminati.boost(100);
+    Iluminati.boostTime(5000);
+  }
+
+  if(Illuminati.number == 69){
+    Illuminati.boost(2);
+  }
 })
 
 
