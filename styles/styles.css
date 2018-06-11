@@ -9,6 +9,15 @@ body{
 
 main{
 }
+.infobar{
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 300px;
+  height: 30px;
+  color: #D0E4F2;
+  transition: opacity 2s ease;
+}
 
 main .click{
   background: #1A1F2B;
